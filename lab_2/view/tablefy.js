@@ -1,6 +1,6 @@
 module.exports = {
     tablefy(object){
-        if(object == null) return null;
+        if(object[0] == null || object[0] == undefined) return null;
         const keys = Object.keys(object[0]);
         let table = [];
         let keyString = new String();
@@ -27,6 +27,7 @@ module.exports = {
             console.log(borderLine);
         }
     },
+    
     tablefyOne(object){
         if(object[0] == undefined || object[0] == null) {
             console.log("No rows to tablefy");
